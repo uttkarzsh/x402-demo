@@ -6,7 +6,7 @@
 
     // Target modern JS and use CommonJS for Node
     "target": "ES2020",
-    "module": "CommonJS",
+    "module": "NodeNext",
 
     // Enable NodeJS-specific globals (like __dirname)
     "lib": ["ES2020"],
