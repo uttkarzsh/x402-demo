@@ -21,7 +21,7 @@ export default function Home() {
         </p>
         <button
           onClick={handleRedirect}
-          className="bg-emerald-500 hover:bg-emerald-600 text-black font-medium py-2 px-6 rounded-lg transition-transform hover:scale-105"
+          className="bg-orange-500 hover:bg-orange-600 text-black font-medium py-2 px-6 rounded-lg transition-transform hover:scale-105"
         >
           View Foxes 🦊
         </button>

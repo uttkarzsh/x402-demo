@@ -6,19 +6,22 @@ export default function Page() {
   const [text, setText] = useState<string>(" ");
 
   async function fetchFox() {
-    setText("Getting fox image");
-    const res = await fetch("https://randomfox.ca/floof/");
-    setText("Showing Fox image");
-    const data = await res.json();
-    setText("Here is your fox");
-    setFox(data.image);
+    try {
+      setText("Getting fox image...");
+      const res = await fetch("https://randomfox.ca/floof/");
+      const data = await res.json();
+      setText("Here is your fox 🦊");
+      setFox(data.image);
+    } catch (error) {
+      setText("Failed to fetch fox 😢");
+    }
   }
 
   return (
     <div className="p-6 text-center">
       <button
         onClick={fetchFox}
-        className="bg-orange-500 text-white px-4 py-2 rounded"
+        className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded"
       >
         Get a Random Fox
       </button>
